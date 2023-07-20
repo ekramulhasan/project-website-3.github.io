@@ -1,0 +1,80 @@
+.about-area{
+    .about {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 30px;
+    
+        .about-content{
+            p {
+                margin-bottom: 10px;
+              }
+    
+              h4 {
+                text-transform: capitalize;
+                margin-bottom: 15px;
+        
+                
+              }
+        } 
+    
+          .about-img {
+            position: relative;
+            z-index: 2;
+    
+            &::after{
+    
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                right: -18px;
+                bottom: 25px;
+                background-color: tomato;
+                z-index: -1;
+    
+            }
+          }
+    
+    
+      }
+
+
+      .about-bottom {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(3,30%);
+        column-gap: 30px;
+
+        .single-about {
+            text-align: center;
+
+            i {
+                font-size: 26px;
+              }
+
+              h4 {
+                text-transform: capitalize;
+                font-weight: 600;
+                /*! font-size: 25px; */
+                margin: 10px 0;
+              }
+
+              a {
+                display: inline-block;
+                color: tomato;
+                text-transform: capitalize;
+                transition: .3s;
+                font-size: 16px;
+
+                &:hover{
+
+                    color: #333;
+                }
+              }
+          }
+       
+      }
+      
+      
+    
+}

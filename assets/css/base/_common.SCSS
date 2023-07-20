@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+a{
+    
+    text-decoration: none;
+    color: #333;
+}
+
+ul{
+    list-style: none;
+}
+
+@mixin bg{
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+
+    &:before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: #333;
+        z-index: -1;
+        opacity: 0.8;
+    }
+}
+
+
+.btn{
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 7px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 500;
+
+    &.border-btn{
+        background-color: tomato;
+        padding: 10px 30px;
+        transition: .3s;
+
+        &:hover{
+            background-color: #333;
+            color: #fff;
+        }
+    }
+
+    &.box-btn{
+        border: 2px solid tomato;
+        padding: 8px 30px;
+        transition: .3s;
+
+        &:hover{
+            background-color: #333;
+            color: #fff;
+            border: 2px solid #fff
+        }
+    }
+}
+
+// padding and margin for top and bottom
+@for $i from 1 to 12{
+
+    .pt-#{$i*10}{
+        padding-top: $i*10px;
+    }
+
+    .pb-#{$i*10}{
+        padding-bottom: $i*10px;
+    }
+
+    .mt-#{$i*10}{
+        margin-top: $i*10px;
+    }
+
+    .mb-#{$i*10}{
+        margin-bottom: $i*10px;
+    }
+
+
+}
+
+
+

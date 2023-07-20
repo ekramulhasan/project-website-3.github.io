@@ -1,0 +1,23 @@
+.video-area{
+    @include bg;
+
+    .video {
+        color: #fff;
+        width: 600px;
+        margin: 0 auto;
+
+        i {
+            font-size: 60px;
+            color: #fff;
+          }
+
+
+          h4 {
+            text-transform: capitalize;
+            font-weight: 800;
+            font-size: 50px;
+            margin: 20px 0;
+          }
+      }
+}
+
